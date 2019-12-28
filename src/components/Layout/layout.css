@@ -1,0 +1,24 @@
+body, html {
+    height: 100%;
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #fbf7eb;
+}
+
+.layout {
+    min-height: 100%;
+    width: 100%;
+}
+
+.box {
+    font-family: "ApercuLight", "Arial";
+    margin: 0 auto;
+    padding: 16px;
+    max-width: 80%;
+}
+
+h1 {
+    font-family: "ApercuMedium", "Arial";
+    font-size: 28px;
+}

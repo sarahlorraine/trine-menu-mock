@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'ApercuMedium';
+    src: local('Apercu'), url(../../public/assets/fonts/apercu/Apercu-Medium.otf) format('opentype');
+  }
+  
+@font-face {
+  font-family: 'ApercuLight';
+  src: local('Apercu'), url(../../public/assets/fonts/apercu/Apercu-Light.otf) format('opentype');
+}
