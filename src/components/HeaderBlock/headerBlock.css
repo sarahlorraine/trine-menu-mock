@@ -1,7 +1,5 @@
 .headerWrapper {
-    min-height: 110px;
     text-align: center;
-    line-height: 75px;
     width: 100%;
     justify-content: center;
     display: flex;
@@ -9,7 +7,9 @@
 }
 
 .headerWrapper > h1 {
-    font-size: 32px;
+    font-size: 28px;
+    line-height: 60px;
+    color: #FBF7F7;
 }
 
 .purple {

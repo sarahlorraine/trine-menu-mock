@@ -1,14 +1,12 @@
 import * as React from 'react';
 import { FunctionComponent } from 'react';
+import { mergeClassNames } from '../helpers';
+
 import "./headerBlock.css";
 
 interface HeaderBlockProps {
-    background?: "purple"; // Add more options
     headerText: React.ReactNode;
-}
-
-const mergeClassNames = (classNames: string[]) => {
-    return classNames.join(' ');
+    background?: "purple" | "yellow";
 }
 
 const HeaderBlock: FunctionComponent<HeaderBlockProps> = ({ headerText, background, children }) => {

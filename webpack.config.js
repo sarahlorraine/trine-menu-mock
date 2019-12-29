@@ -33,6 +33,9 @@ module.exports = {
                   modules: true
                 }
               }, 
+              {
+                loader: 'postcss-loader'
+              },
               CSSModuleLoader, 
               "sass-loader" 
             ],
@@ -49,6 +52,9 @@ module.exports = {
                     importLoaders: 1,
                     modules: true
                   }
+                },
+                {
+                  loader: 'postcss-loader'
                 }
               ],
               include: /\.module\.css$/
@@ -57,7 +63,10 @@ module.exports = {
               test: /\.css$/,
               use: [
                 'style-loader',
-                'css-loader'
+                'css-loader',
+                {
+                  loader: 'postcss-loader',
+                }
               ],
               exclude: /\.module\.css$/
             },
@@ -91,6 +100,8 @@ module.exports = {
   },
   plugins: [
       new HtmlWebpackPlugin({ template: path.resolve(__dirname, 'src', 'index.html') }),
-      new webpack.HotModuleReplacementPlugin()
+      new webpack.HotModuleReplacementPlugin(),
+      require('precss'),
+      require('autoprefixer')
   ]
 }
