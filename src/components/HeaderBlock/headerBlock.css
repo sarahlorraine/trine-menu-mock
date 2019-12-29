@@ -1,0 +1,23 @@
+.headerWrapper {
+    min-height: 110px;
+    text-align: center;
+    line-height: 75px;
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    color: #fff;
+}
+
+.headerWrapper > h1 {
+    font-size: 32px;
+}
+
+.purple {
+    background-image: url('../../../public/assets/images/plum-aubergine.png');
+    background-size: 150%;
+}
+
+.yellow {
+    background-image: url('../../../public/assets/images/plum-aubergine.png');
+    background-size: 150%;
+}

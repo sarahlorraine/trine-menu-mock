@@ -1,0 +1,14 @@
+.topBarWrapper {
+    min-height: 40px;
+    padding: 10px 12px;
+    position: relative;
+    background-color: #fff;
+}
+
+.trinishLogo {
+    background: url("../../../public/assets/logo1.png") 0 0 no-repeat;
+    background-size: contain;
+    display: block;
+    width: 200px;
+    height: 38px;
+}

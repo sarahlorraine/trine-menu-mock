@@ -7,3 +7,18 @@
   font-family: 'ApercuLight';
   src: local('Apercu'), url(../../public/assets/fonts/apercu/Apercu-Light.otf) format('opentype');
 }
+
+@font-face {
+  font-family: 'ApercuMono';
+  src: local('Apercu'), url(../../public/assets/fonts/apercu/Apercu-Mono.otf) format('opentype');
+}
+
+@font-face {
+  font-family: 'ApercuBold';
+  src: local('Apercu'), url(../../public/assets/fonts/apercu/Apercu-Bold.otf) format('opentype');
+}
+
+@font-face {
+  font-family: 'ApercuRegular';
+  src: local('Apercu'), url(../../public/assets/fonts/apercu/Apercu-Regular.otf) format('opentype');
+}
