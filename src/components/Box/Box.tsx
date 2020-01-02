@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { FunctionComponent } from 'react';
-import "../Layout/layout.css"
+import "../Layout/layout.scss"
 
 interface BoxProps {}
 

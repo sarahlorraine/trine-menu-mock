@@ -20,27 +20,18 @@ module.exports = {
   },
   devtool: 'source-map',
   resolve: {
-      extensions: ['.js', '.jsx', '.json', '.ts', '.tsx']
+      extensions: ['.js', '.jsx', '.json', '.ts', '.tsx', '.scss']
   },
   module: {
       rules: [
-          { 
-              test: /\.scss$/, 
-              use: [ "style-loader", {
-                loader: 'css-loader',
-                options: {
-                  importLoaders: 1,
-                  modules: true
-                }
-              }, 
-              {
-                loader: 'postcss-loader'
-              },
-              CSSModuleLoader, 
-              "sass-loader" 
-            ],
-              exclude: /\.module\.scss$/, 
-
+          {
+            test: /\.s(a|c)ss$/,
+            exclude: /\.module.(s(a|c)ss)$/,
+            loader: [
+              'style-loader',
+              'css-loader',
+              'sass-loader',
+            ]
           },
           {
               test: /\.css$/,

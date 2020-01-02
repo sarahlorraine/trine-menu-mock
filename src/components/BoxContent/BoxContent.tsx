@@ -1,10 +1,10 @@
 import * as React from 'react';
 import { FunctionComponent } from 'react';
-import "./boxContent.css"
+import "./boxContent.scss"
 
-interface BoxConetntProps {}
+interface BoxContentProps {}
 
-const BoxContent: FunctionComponent<BoxConetntProps> = (props) => {
+const BoxContent: FunctionComponent<BoxContentProps> = (props) => {
   return <div className="content">{props.children}</div>
 }
 

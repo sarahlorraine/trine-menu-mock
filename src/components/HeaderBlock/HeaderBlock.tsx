@@ -2,7 +2,7 @@ import * as React from 'react';
 import { FunctionComponent } from 'react';
 import { mergeClassNames } from '../helpers';
 
-import "./headerBlock.css";
+import "./headerBlock.scss";
 
 interface HeaderBlockProps {
     headerText: React.ReactNode;

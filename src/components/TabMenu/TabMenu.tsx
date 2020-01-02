@@ -2,7 +2,7 @@ import * as React from 'react';
 import { FunctionComponent } from 'react';
 import { mergeClassNames } from '../helpers';
 
-import "./tabMenu.css"
+import "./tabMenu.scss"
 
 interface TabMenuProps {
   links: TabLinks[];

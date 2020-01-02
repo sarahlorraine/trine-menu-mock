@@ -1,13 +1,21 @@
+@import '../../globals/base_variables.scss';
+
 .topBarWrapper {
-    min-height: 50px;
-    padding: 0 15px; 
+    min-height: 40px;
+    padding: 10px 12px;
     position: relative;
-    background-color: red;
+    background-color: #fff;
 }
 
-.trinishLogo {
-    background-color: #333;
-    background-image: url('../../../public/assets/logo1.png');
-    width: 200px;
-    height: 100%;
+.trineLogo {
+    background: url("../../../public/assets/logo1.png") 0 0 no-repeat;
+    background-size: contain;
+    display: block;
+    width: 144px;
+    line-height: 40px;
+    height: 38px;
+    font-family: "ApercuMono";
+    color: $purple;
+    font-size: 18px;
+    text-align: right;
 }

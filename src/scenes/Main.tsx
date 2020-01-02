@@ -5,11 +5,11 @@ import { hot } from 'react-hot-loader';
 import HeaderBlock from "../components/HeaderBlock/HeaderBlock";
 import Box from "../components/Box/Box";
 import TabMenu, { PrototypeType, TabLinks, TabId } from "../components/TabMenu/TabMenu";
-
-import "./main.css";
-import '../globals/fonts.css';
 import { mergeClassNames } from "../components/helpers";
 import MobileWrapper from "../components/MobileWrapper/MobileWrapper";
+
+import "./main.scss";
+import '../globals/fonts.scss';
 
 export interface MainProps { firstName: string; lastName: string; }
 

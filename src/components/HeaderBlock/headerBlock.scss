@@ -4,12 +4,12 @@
     justify-content: center;
     display: flex;
     color: #fff;
-}
-
-.headerWrapper > h1 {
-    font-size: 28px;
-    line-height: 60px;
-    color: #FBF7F7;
+    
+    & h1 {
+        font-size: 28px;
+        line-height: 60px;
+        color: #FBF7F7;
+    }
 }
 
 .purple {

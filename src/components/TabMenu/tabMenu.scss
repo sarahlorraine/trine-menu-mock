@@ -1,8 +1,9 @@
+@import '../../globals/base_variables.scss';
 
 .tabBlock {
     background: #fff;
     height: 54px;
-    border-bottom: 1px solid #e5dccc;
+    border-bottom: 1px solid $gray;
 }
 
 .tabWrapper {
@@ -19,34 +20,34 @@
 .tabItem {
     flex-shrink: 0;
     font-family: "ApercuLight";
-    color: #281e27;
+    color: $primary;
     font-size: 16px;
     text-decoration: none;
     position: relative;
     margin-right: 16px;
     cursor: pointer;
-}
 
-.tabItem:last-child {
-    padding-right: 14px;
-}
+    &:last-child {
+        padding-right: 14px;
+    }
 
-.tabItem:hover {
-    color: #ffc973;
+    &:hover {
+        color: $secondary;
+    }
 }
 
 .tabItemActive {
     font-family: "ApercuMedium";
-}
 
-.tabItemActive::after {
-    content: "";
-    display: block;
-    position: absolute;
-    bottom: 0;
-    height: 2px;
-    width: 100%;
-    background-color: #ffc973;
+    &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        bottom: 0;
+        height: 2px;
+        width: 100%;
+        background-color: $secondary;
+    }
 }
 
 .iconsWrapper {
@@ -70,19 +71,18 @@
 .more {
     margin: 0 0 0 auto;
     padding: 0!important;
-}
 
-.more:hover {
-    cursor: pointer;
+    &:hover {
+        cursor: pointer;
+    }
 }
-
 
 .moreDropdownWrapper {
     position: absolute;
     opacity: 0;
     visibility: hidden;
     background-color: #fff;
-    border: solid 1px #e5dccc;
+    border: solid 1px $gray;
     border-top: none;
     border-radius: 0 0 4px 4px;
     top: 50px;
@@ -90,20 +90,19 @@
     z-index: 999;
     width: 180px;
     transition: all ease-in-out 0.10s;
-}
-
-.moreDropdownWrapper ul {
-    margin: 0;
-    list-style: none;
-    text-align: right;
-}
-
-.moreDropdownWrapper li {
-    margin-right: 14px;
-}
-
-.moreDropdownWrapper:hover {
-    cursor: pointer;
+    & ul {
+        margin: 0;
+        list-style: none;
+        text-align: right;
+    }
+    & li {
+        margin-right: 14px;
+    
+        &:hover {
+            cursor: pointer;
+            color: $secondary;
+        }
+    }
 }
 
 .moreActive {
@@ -147,25 +146,3 @@
     background: url('../../../public/assets/images/select-arrow.png') no-repeat right 10px top 11px;
     background-size: 12px;
 }
-
-/* 
-@media screen and (min-width: 768px) {
-    .tabWrapper {
-        justify-content: space-evenly;
-        max-width: 600px;
-        overflow: hidden;
-        padding: 0 8px;
-    }
-    .tabItem {
-        font-family: "ApercuRegular";
-        margin-right: 0;
-        font-size: 18px;
-    }
-    .selectWrapper { 
-        width: auto;
-    }
-    .selectBox {
-        width: 280px;
-
-    }
-} */

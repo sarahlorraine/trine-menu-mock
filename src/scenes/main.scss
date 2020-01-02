@@ -1,13 +1,15 @@
+@import "../globals/base_variables";
+
 .selectorUl {
   display: grid;
+  padding: 0;
   grid-template-columns: auto;
-  padding-inline-start: 0;
-}
 
-.selectorUl li {
-  margin: 0 0 20px 0;
-  list-style: none;
-  display: block;
+    li {
+        margin: 0 0 20px 0;
+        list-style: none;
+        display: block;
+    }
 }
 
 .proTypeItem {
@@ -17,18 +19,18 @@
   padding: 18px;
   border-radius: 4px;
   background-color: #fff;
-  box-shadow: 0 4px 0 0 #e5dccc;
-}
+  box-shadow: 0 4px 0 0 $gray;
 
-.proTypeItem:hover {
-  font-weight: 600;
-  cursor: pointer;
-  color: #ffc973;
+    &:hover {
+        font-weight: 600;
+        cursor: pointer;
+        color: $secondary;
+    }
 }
 
 .proTypeItemActive {
   font-family: "ApercuMedium";
-  box-shadow: 0 4px 0 0 #ffc973;
+  box-shadow: 0 4px 0 0 $secondary;
 }
 
 .subtext {

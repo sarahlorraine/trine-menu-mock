@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { FunctionComponent } from 'react';
-import "./layout.css"
+import "./layout.scss"
 
 interface LayoutProps {}
 

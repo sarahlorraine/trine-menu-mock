@@ -1,10 +1,10 @@
 import * as React from 'react';
-import './topBar.css';
+import './topBar.scss';
 
 const TopBar = () => {
   return (
     <div className={"topBarWrapper"}>
-     <span className={"trinishLogo"}></span>
+     <span className={"trineLogo"}></span>
     </div>
   );
 }
