@@ -7,6 +7,7 @@
 
 .tabWrapper {
     display: flex;
+    position: relative;
     margin: 0 auto;
     justify-content: flex-start;
     align-items: baseline;
@@ -23,6 +24,11 @@
     text-decoration: none;
     position: relative;
     margin-right: 16px;
+    cursor: pointer;
+}
+
+.tabItem:last-child {
+    padding-right: 14px;
 }
 
 .tabItem:hover {
@@ -46,14 +52,69 @@
 .iconsWrapper {
     display: flex;
     height: 100%;
-    justify-content: center;
+    margin: 0 30px;
+    justify-content: space-evenly;
 }
 
 .iconItem {
     align-self: center;
-    margin-right: 22px;
+    margin-right: 10%;
     vertical-align: text-bottom;
     height: 100%;
+}
+
+.truncated {
+    overflow: visible;
+}
+
+.more {
+    margin: 0 0 0 auto;
+    padding: 0!important;
+}
+
+.more:hover {
+    cursor: pointer;
+}
+
+
+.moreDropdownWrapper {
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    background-color: #fff;
+    border: solid 1px #e5dccc;
+    border-top: none;
+    border-radius: 0 0 4px 4px;
+    top: 50px;
+    right: 0;
+    z-index: 999;
+    width: 180px;
+    transition: all ease-in-out 0.10s;
+}
+
+.moreDropdownWrapper ul {
+    margin: 0;
+    list-style: none;
+    text-align: right;
+}
+
+.moreDropdownWrapper li {
+    margin-right: 14px;
+}
+
+.moreDropdownWrapper:hover {
+    cursor: pointer;
+}
+
+.moreActive {
+    top: 54px;
+    opacity: 1;
+    visibility: visible;
+}
+
+
+.iconsWrapper a:last-of-type  {
+    margin-right: 0;
 }
 
 .icon {
@@ -71,19 +132,23 @@
 
 .selectBox {
     appearance: none;
-    border: solid 1px #ccc;
-    font-family: "ApercuRegular";
-    font-size: 18px;
+    -webkit-appearance: none;
+    border: solid 1px #e5dccc;
+    font-family: "ApercuLight";
+    font-size: 16px;
     display: block;
     width: 100%;
+    margin: 0 auto;
     height: 30px;
     padding: 0 8px;
-    border-radius: 2px;
+    margin: 0 24px;
+    border-radius: 4px;
     background-color: #fff;
-    background: url('../../../public/assets/images/select-arrow.png') no-repeat right 8px top 10px;
-    background-size: 16px;
+    background: url('../../../public/assets/images/select-arrow.png') no-repeat right 10px top 11px;
+    background-size: 12px;
 }
 
+/* 
 @media screen and (min-width: 768px) {
     .tabWrapper {
         justify-content: space-evenly;
@@ -96,13 +161,11 @@
         margin-right: 0;
         font-size: 18px;
     }
-    .tabItemActive {
-        font-family: "ApercuMedium";
-    }
     .selectWrapper { 
         width: auto;
     }
     .selectBox {
         width: 280px;
+
     }
-}
+} */

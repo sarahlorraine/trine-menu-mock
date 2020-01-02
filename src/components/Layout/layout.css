@@ -15,8 +15,7 @@ body, html {
 .box {
     font-family: "ApercuLight", "Arial";
     margin: 0 auto;
-    padding: 16px;
-    max-width: 80%;
+    padding: 16px 36px;
 }
 
 h1 {
@@ -27,4 +26,5 @@ h1 {
 h2 {
     font-family: "ApercuMedium", "Arial";
     font-size: 22px;
+    margin-bottom: 8px;
 }

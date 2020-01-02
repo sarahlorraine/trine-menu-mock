@@ -16,10 +16,18 @@ export enum PrototypeType {
   Icons = "icons"
 }
 
+export enum TabId {
+  Overview = "overview",
+  Activities = "activities",
+  Investments = "investments",
+  Transactions = "transactions",
+  Sharing = "sharing"
+}
+
 export interface TabLinks {
-  id: "overview" | "activities" | "investments" | "transactions" | "sharing";
+  id: TabId;
   title: string;
-  route: string;
+  onClick: () => void;
   active: boolean;
 }
 
@@ -46,16 +54,26 @@ const TabMenu: FunctionComponent<TabMenuProps> = ({links, mobilePrototype}) => {
   const renderTabs = (items: TabLinks[]) => {
     return (
     <div className={"tabWrapper"}>
-      {items.map((item, i) => <a key={i} className={mergeClassNames(["tabItem", item.active && "tabItemActive"])} href={item.route}>{item.title}</a>)}
+      {items.map((item, i) => <a key={i} className={mergeClassNames(["tabItem", item.active && "tabItemActive"])} onClick={item.onClick}>{item.title}</a>)}
     </div>
 );
   }
 
   const renderTruncated = (items: TabLinks[]) => {
+    const firstThree = items.slice(0, 3);
+    const moreItems = items.slice(3, items.length)
+    const [showMore, setShowMore] = React.useState(false);
     return (
-      <div className={"tabWrapper"}>
-        {items.map((item, i) => {
-        <a key={i} className={mergeClassNames(["tabItem", item.active && "tabItemActive"])} href={item.route}>{item.title}</a>})}
+      <div className={mergeClassNames(["tabWrapper", "truncated"])}>
+        {firstThree.map((item, i) => 
+          <a key={i} className={mergeClassNames(["tabItem", item.active && "tabItemActive"])} onClick={item.onClick}>{item.title}</a>
+        )}
+        <a className={mergeClassNames(["tabItem", "more"])} onClick={() => setShowMore(!showMore)}>More</a>
+        <div className={mergeClassNames(["moreDropdownWrapper", showMore && "moreActive"])}>
+          <ul>
+            {moreItems.map((more, i) => <li key={i} onClick={more.onClick}>{more.title}</li> )}
+          </ul>
+        </div>
        </div>
     );
   }
@@ -63,7 +81,7 @@ const TabMenu: FunctionComponent<TabMenuProps> = ({links, mobilePrototype}) => {
   const renderIcons = (items: TabLinks[]) => {
     return (
     <div className={"iconsWrapper"}>
-      {items.map((item, i) => <a key={i} className={mergeClassNames(["tabItem", "iconItem", item.active && "tabItemActive"])} href={item.route}>{getIcon(item.id)}</a>)}
+      {items.map((item, i) => <a key={i} className={mergeClassNames(["tabItem", "iconItem", item.active && "tabItemActive"])} onClick={item.onClick}>{getIcon(item.id)}</a>)}
     </div>
     );
   }

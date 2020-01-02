@@ -9,6 +9,11 @@
     background: url("../../../public/assets/logo1.png") 0 0 no-repeat;
     background-size: contain;
     display: block;
-    width: 200px;
+    width: 144px;
+    line-height: 40px;
     height: 38px;
+    font-family: "ApercuMono";
+    color: #54324f;
+    font-size: 18px;
+    text-align: right;
 }

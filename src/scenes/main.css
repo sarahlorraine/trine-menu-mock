@@ -8,7 +8,6 @@
   margin: 0 0 20px 0;
   list-style: none;
   display: block;
-
 }
 
 .proTypeItem {
@@ -33,15 +32,7 @@
 }
 
 .subtext {
+  display: block;
   font-family: "ApercuLight";
-}
-
-@media screen and (min-width: 768px) {
-  .selectorUl {
-    grid-template-columns: auto auto;
-  }
-
-  .selectorUl li {
-    margin: 0 20px 20px 0;
-  }
+  margin-bottom: 26px;
 }
