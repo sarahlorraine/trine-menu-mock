@@ -1,7 +1,11 @@
 
 ## Project summary
 
-This project was created to showcase potential alternatives to a mobile tab menu in Trine. Three examples have been prototyped.
+This project was created to showcase potential alternatives to a mobile tabulated menu for the Trine web app. Three examples have been prototyped.
+
+## Preview:
+
+<img width="522" alt="Screen Shot 2022-01-23 at 17 01 52" src="https://user-images.githubusercontent.com/45079074/150687555-5264e042-8542-4d0a-b4d6-59ee0ce07525.png">
 
 ### 1. `Select dropdown` 
 
